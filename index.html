@@ -1,53 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ameena E.H | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ameena E.H - Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    nav a:hover {
+      background-color: #575757;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #4CAF50;
+    }
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .project-card {
+      background: white;
+      padding: 20px;
+      flex: 1 1 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    .project-card a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <h1>Ameena E.H</h1>
-    <p>Data Analyst | Python | SQL | Power BI</p>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <h1>Ameena E.H</h1>
+  <p>Data Analyst | Python | SQL | Web Analytics</p>
 </header>
 
+<nav>
+  <a href="#about">About Me</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
 <section id="about">
-    <h2>About Me</h2>
-    <p>I am a passionate Data Analyst with a degree in Data Science. Skilled in Python, SQL, Excel, and Power BI, I enjoy turning data into actionable insights.</p>
+  <h2>About Me</h2>
+  <p>Hello! I am Ameena E.H, a passionate Data Analyst. I have a strong foundation in Python, SQL, R, and Web Analytics, and I enjoy extracting meaningful insights from data to drive informed decisions. I recently completed several projects demonstrating my skills in predictive modeling, revenue projection, and visualization.</p>
 </section>
 
 <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-        <div class="project-card">
-            <h3>Business Revenue Projection</h3>
-            <img src="images/business-revenue.png" alt="Business Revenue Project" />
-            <p>Analyzed historical sales data to forecast revenue trends using Python and Power BI.</p>
-        </div>
-        <div class="project-card">
-            <h3>Rainfall Analysis</h3>
-            <img src="images/rainfall-analysis.png" alt="Rainfall Analysis Project" />
-            <p>Processed meteorological data to analyze rainfall patterns using Python and created dashboards.</p>
-        </div>
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="project-card">
+      <h3>Rainfall Prediction</h3>
+      <p>A predictive model using Python to forecast rainfall based on historical data.</p>
+      <a href="https://rainfall-prediction-henna.vercel.app/" target="_blank">View Project</a>
     </div>
+    <div class="project-card">
+      <h3>Business Revenue Projection and Growth Outlook</h3>
+      <p>A detailed analysis and projection of business revenue trends using Python and Excel.</p>
+      <a href="https://github.com/minnuameena66-png/Business-Revenue-Projection-and-Growth-Outlook/blob/1b80ec0256a09320ad46d66ef0a5b38d6b753189/Business_Revenue_Projection_and_Growth_Outlook.ipynb" target="_blank">View Code</a>
+    </div>
+  </div>
 </section>
 
 <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:ameena@example.com">ameena@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/your-username" target="_blank">github.com/your-username</a></p>
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/ameena-e-h" target="_blank">https://www.linkedin.com/in/ameena-e-h</a></p>
 </section>
 
 <footer>
-    <p>&copy; 2025 Ameena E.H. All rights reserved.</p>
+  <p>&copy; 2025 Ameena E.H | All Rights Reserved</p>
 </footer>
 
 </body>
