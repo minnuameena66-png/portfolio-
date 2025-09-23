@@ -1,0 +1,60 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f0f0f; color: #fff; scroll-behavior: smooth; }
+
+a { text-decoration: none; color: inherit; }
+
+/* Navigation */
+nav {
+    position: sticky;
+    top: 0;
+    background: #111;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+nav .logo { font-weight: 700; font-size: 1.3rem; color: #ff4d5a; }
+nav ul { display: flex; gap: 1.5rem; list-style: none; }
+nav ul li a { font-weight: 500; transition: 0.3s; }
+nav ul li a:hover { color: #ff4d5a; }
+
+/* Sections */
+section { padding: 6rem 2rem; max-width: 1000px; margin: 0 auto; }
+h1, h2 { font-weight: 700; }
+h1 { font-size: 3rem; color: #fff; margin-bottom: 1rem; }
+h2 { font-size: 2rem; color: #fff; margin-bottom: 1.5rem; text-align: center; }
+
+/* Hero */
+.hero p { font-size: 1.1rem; color: #c0c0c0; margin-bottom: 2rem; text-align: center; max-width: 700px; margin-left: auto; margin-right: auto; }
+.buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.btn { background-color: #ff4d5a; padding: 0.8rem 1.5rem; border-radius: 0.5rem; font-weight: 600; transition: 0.3s; color: #fff; }
+.btn:hover { background-color: #e63946; }
+
+/* Skills */
+.skills { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.8rem; margin-top: 1rem; }
+.skills span { border: 1px solid #ff6f61; padding: 0.3rem 0.8rem; border-radius: 0.5rem; font-size: 0.9rem; color: #ff6f61; }
+
+/* About */
+#about p { color: #c0c0c0; max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8; text-align: center; }
+
+/* Projects */
+.project-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; }
+.project-card { background: #1a1a1a; padding: 1.5rem; border-radius: 1rem; max-width: 300px; transition: transform 0.3s; }
+.project-card:hover { transform: translateY(-5px); }
+.project-card h3 { font-size: 1.3rem; margin-bottom: 1rem; }
+.project-card p { color: #c0c0c0; margin-bottom: 1rem; }
+.project-card a { color: #ff4d5a; font-weight: 600; }
+
+/* Contact / Footer */
+#contact p { text-align: center; color: #c0c0c0; margin: 0.5rem 0; }
+#contact a { color: #ff4d5a; }
+footer { text-align: center; padding: 2rem; color: #777; font-size: 0.9rem; }
+
+/* Responsive */
+@media(max-width:768px){
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.7rem; }
+}
