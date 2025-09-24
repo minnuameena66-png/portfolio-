@@ -5,202 +5,90 @@
   box-sizing: border-box;
 }
 
-/* General body */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0d0d0d; /* Black background */
-  color: #f0f0f0; /* Light text */
-  line-height: 1.6;
-}
-
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  background-color: #000; /* Black navbar */
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.logo {
-  font-size: 20px;
-  font-weight: bold;
-  color: #1E90FF; /* Blue accent */
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-}
-
-.nav-links li {
-  margin-left: 20px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #f0f0f0;
-  font-weight: 500;
-  padding: 5px 10px;
-  transition: 0.3s ease;
-  border-radius: 5px;
-}
-
-/* Hover effect */
-.nav-links a:hover {
-  background-color: #1E90FF;
-  color: #fff;
-}
-
-/* Active link */
-.nav-links a.active {
-  background-color: #1E90FF;
+  font-family: Arial, sans-serif;
+  background-color: #000; /* Black theme background */
   color: #fff;
 }
 
 /* Hero Section */
-#hero {
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom right, #000428, #004e92); /* Black + Blue gradient */
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 90vh;
+  justify-content: center;
   text-align: center;
-  padding: 20px;
-  background: linear-gradient(135deg, #000 60%, #1E90FF 100%);
+  overflow: hidden;
 }
 
-.hero-content h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
-  color: #fff;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay on top */
 }
 
-.hero-content h2 {
-  font-size: 28px;
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px solid #00aaff; /* Blue border */
+  object-fit: cover;
   margin-bottom: 20px;
-  color: #1E90FF;
 }
 
-.hero-content p {
-  max-width: 600px;
-  margin: 0 auto 30px auto;
-  color: #ccc;
-}
-
-.hero-buttons .btn {
-  display: inline-block;
-  margin: 10px;
-  padding: 12px 25px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 16px;
-  transition: 0.3s ease;
-}
-
-.primary-btn {
-  background-color: #1E90FF;
-  color: #fff;
-}
-
-.primary-btn:hover {
-  background-color: #0b70d1;
-}
-
-.secondary-btn {
-  background-color: transparent;
-  border: 2px solid #1E90FF;
-  color: #1E90FF;
-}
-
-.secondary-btn:hover {
-  background-color: #1E90FF;
-  color: #fff;
-}
-
-/* Section Titles */
-section h2 {
-  font-size: 32px;
-  text-align: center;
-  margin: 40px 0 20px;
-  color: #1E90FF;
-}
-
-/* About Section */
-#about {
-  max-width: 900px;
-  margin: auto;
-  padding: 40px;
-  text-align: center;
-}
-
-/* Projects Section */
-#projects {
-  max-width: 1000px;
-  margin: auto;
-  padding: 40px;
-}
-
-.project-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-.project {
-  background: #111;
-  padding: 20px;
-  border-radius: 12px;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.project:hover {
-  transform: translateY(-5px);
-  background: #1b1b1b;
-}
-
-.project h3 {
-  color: #1E90FF;
+/* Text */
+h1 {
+  font-size: 2.5rem;
+  color: #00aaff; /* Blue */
   margin-bottom: 10px;
 }
 
-.project a {
+h2 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.btn {
   display: inline-block;
-  margin-right: 10px;
-  margin-top: 10px;
-  color: #1E90FF;
+  padding: 10px 20px;
+  background: #00aaff;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
+  border-radius: 30px;
+  transition: 0.3s;
 }
 
-.project a:hover {
-  text-decoration: underline;
+.btn:hover {
+  background: #0077cc;
 }
 
-/* Contact Section */
-#contact {
-  max-width: 800px;
-  margin: auto;
-  padding: 40px;
-  text-align: center;
+/* Bounce Animation */
+.bounce {
+  animation: bounce 2s infinite;
 }
 
-#contact a {
-  color: #1E90FF;
-  text-decoration: none;
-}
-
-#contact a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #000;
-  color: #aaa;
-  margin-top: 40px;
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
 }
