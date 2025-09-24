@@ -1,51 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects | Ameena E H</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Projects</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- Navbar -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Portfolio</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+  <header class="site-header">
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">HOME</a></li>
+        <li><a href="bio.html" class="nav-link">BIO</a></li>
+        <li><a href="project.html" class="nav-link active">PROJECT</a></li>
+        <li><a href="contact.html" class="nav-link">CONTACT</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-container">
-      <div class="project">
-        <h3>Rainfall Prediction</h3>
-        <p>
-          Developed a predictive model to forecast rainfall using historical weather data and Python libraries.
-        </p>
-        <a href="https://rainfall-prediction-henna.vercel.app/" target="_blank">View Project</a>
-        <a href="https://github.com/minnuameena66-png/Business-Revenue-Projection-and-Growth-Outlook" target="_blank">GitHub</a>
+  <main class="page-content">
+    <h1 class="page-title">Projects</h1>
+    <div class="grid">
+      <div class="card">
+        <img src="images/profile.jpg" alt="Project Image">
+        <div class="card-body">
+          <h3>Rainfall Prediction in India</h3>
+          <p>Short description about the project.</p>
+        </div>
       </div>
-      <div class="project">
-        <h3>Business Revenue Projection</h3>
-        <p>
-          Built a revenue projection model and growth outlook analysis using Python and Excel to aid business decision-making.
-        </p>
-        <a href="https://business-revenue-projection-and-gro.vercel.app/" target="_blank">View Project</a>
-        <a href="https://github.com/minnuameena66-png/Business-Revenue-Projection-and-Growth-Outlook" target="_blank">GitHub</a>
+      <div class="card">
+        <img src="images/profile.jpg" alt="Project Image">
+        <div class="card-body">
+          <h3>Business Revenue Projection</h3>
+          <p>Short description about the project.</p>
+        </div>
       </div>
     </div>
-  </section>
+  </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Ameena E H. All Rights Reserved.</p>
+  <footer class="site-footer">
+    <p>© 2025 Ameena E H</p>
   </footer>
 </body>
 </html>
