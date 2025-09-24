@@ -1,37 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Ameena E H</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Contact</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- Navbar -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Portfolio</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+  <header class="site-header">
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">HOME</a></li>
+        <li><a href="bio.html" class="nav-link">BIO</a></li>
+        <li><a href="project.html" class="nav-link">PROJECT</a></li>
+        <li><a href="contact.html" class="nav-link active">CONTACT</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:ameena@example.com">ameena@example.com</a></p>
-    <p>Phone: <a href="tel:8078135957">8078135957</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com" target="_blank">My LinkedIn</a></p>
-    <p>GitHub: <a href="https://github.com/minnuameena66-png" target="_blank">My GitHub</a></p>
-  </section>
+  <main class="page-content">
+    <h1 class="page-title">Contact Me</h1>
+    <form class="contact-form">
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="Email">
+      <textarea placeholder="Your Message"></textarea>
+      <button class="btn-submit" type="submit">Send</button>
+    </form>
+  </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Ameena E H. All Rights Reserved.</p>
+  <footer class="site-footer">
+    <p>© 2025 Ameena E H</p>
   </footer>
 </body>
 </html>
