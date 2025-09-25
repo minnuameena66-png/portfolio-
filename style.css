@@ -53,12 +53,13 @@ header {
 }
 
 .hero-left {
-    flex: 0.5; /* Makes the left section narrower to shift the image's start point to the middle */
+    flex: 0.5;
     padding-right: 50px;
 }
 
 .hero-right {
-    flex: 2.5; /* Makes the right section much wider */
+    flex: 2.5;
+    /* Aligns the image to the right within its wide container */
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -91,11 +92,10 @@ header {
 
 /* Image Styling */
 .profile-pic {
-    width: 100%; /* Stretches the image to fill the container's width */
-    height: 100%; /* Ensures the image fills the container's height */
+    /* These properties ensure the image is responsive and not cropped */
+    max-width: 100%;
+    height: auto;
     display: block;
     border-radius: 0;
     border: none;
-    object-fit: cover; /* This value will fill the space while maintaining the aspect ratio, which will cause cropping. */
-    object-position: center 50%; /* The key to fixing your head getting cropped! This shifts the vertical focus of the image up. You may need to adjust the percentage (e.g., 25% or 30%) to get the perfect position for your image. */
 }
