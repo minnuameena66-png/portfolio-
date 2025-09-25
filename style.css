@@ -1,16 +1,23 @@
+/* Remove default browser margins */
+body {
+  margin: 0;
+  padding: 0;
+  background: #000; /* black background */
+  font-family: Arial, sans-serif;
+}
+
 .hero {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #000; /* black theme */
-  padding: 0 50px;
+  padding: 0;
 }
 
 .hero-left {
   flex: 1;
   color: #fff;
-  z-index: 2;
+  padding-left: 50px;
 }
 
 .hero-left h1 {
@@ -35,15 +42,15 @@
   flex: 1;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
-  background: transparent;
+  align-items: stretch;
+  overflow: hidden;
 }
 
 .profile-pic {
-  height: 90vh;
-  width: auto;
-  object-fit: contain;
-  border-radius: 0;
-  background: none;
-  box-shadow: none;
+  width: 100%;       /* take entire right side */
+  height: 100vh;     /* fill screen height */
+  object-fit: cover; /* zoom + crop naturally */
+  border-radius: 0;  
+  background: none;  
+  box-shadow: none;  
 }
