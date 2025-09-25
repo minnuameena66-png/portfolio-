@@ -46,7 +46,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80vh; /* Set a fixed height that is shorter than the full page */
+    height: 95vh; /* Increased height to make the image longer */
     padding: 0 50px;
     margin-top: 60px;
     box-sizing: border-box;
@@ -58,7 +58,7 @@ header {
 }
 
 .hero-right {
-    flex: 2; /* Occupies more space than the left side */
+    flex: 3; /* Increased flex value to make the right side wider */
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -91,7 +91,7 @@ header {
 
 /* Image Styling */
 .profile-pic {
-    max-height: 70vh; /* Limits the image height to a portion of the viewport height */
+    max-height: 90vh; /* Increased max-height to make the image taller */
     width: auto;
     display: block;
     border-radius: 0;
@@ -99,5 +99,3 @@ header {
     object-fit: contain;
     object-position: center;
 }
-
-The video "HTML Page Width and Height Settings" explains how to control a webpage's dimensions using CSS to ensure it fits on a single screen without scrolling.
