@@ -1,52 +1,129 @@
 /* Reset */
 body {
-  margin: 0;
-  padding: 0;
-  background: #000;
-  font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #000;
+    font-family: Arial, sans-serif;
+    color: #fff;
 }
 
 /* Navbar */
 header {
-  background: #000; /* black theme */
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10;
+    background: #000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
 }
 
 .navbar {
-  display: flex;
-  justify-content: flex-end;
-  padding: 20px 50px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 50px;
 }
 
 .navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
 }
 
 .navbar ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
 .navbar ul li a:hover {
-  color: #007bff; /* blue hover */
+    color: #007bff;
 }
 
-/* Adjust hero so it starts below navbar */
+/* Hero Section */
 .hero {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0;
-  margin-top: 60px; /* avoid overlap with navbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 50px;
+    margin-top: 60px;
+    box-sizing: border-box;
 }
 
+.hero-left {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.hero-right {
+    flex: 2; /* Occupies more space than the left side */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Text Styling */
+.hello {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #fff;
+}
+
+.hero-left h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.hero-left h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #fff;
+    margin-top: 5px;
+}
+
+.highlight {
+    color: #007bff;
+}
+
+/* Image Styling */
+.profile-pic {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0; /* Makes it rectangular */
+    border: none;
+    object-fit: contain; /* Ensures the whole image is visible */
+    object-position: center;
+}
+
+/* Button Styling */
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-hire {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+}
+
+.btn-works {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
