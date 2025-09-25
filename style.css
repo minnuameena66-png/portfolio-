@@ -46,19 +46,19 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 95vh; /* Increased height to make the image longer */
+    height: 95vh;
     padding: 0 50px;
     margin-top: 60px;
     box-sizing: border-box;
 }
 
 .hero-left {
-    flex: 1;
+    flex: 0.8; /* Reduced size to push the image to the left */
     padding-right: 50px;
 }
 
 .hero-right {
-    flex: 3; /* Increased flex value to make the right side wider */
+    flex: 2.2; /* Increased size to make the image wider, starting from the middle */
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -91,7 +91,7 @@ header {
 
 /* Image Styling */
 .profile-pic {
-    max-height: 90vh; /* Increased max-height to make the image taller */
+    max-height: 90vh;
     width: auto;
     display: block;
     border-radius: 0;
