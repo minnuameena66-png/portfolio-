@@ -91,12 +91,12 @@ header {
 
 /* Image Styling */
 .profile-pic {
-    max-height: 90vh; /* This can be removed if you want the image to stretch to fit the full height */
-    width: 90%; /* This is the key change to make the image fill the width */
-    height: 100%; /* This is the key change to make the image fill the height */
+    max-height: 90vh;
+    width: 100%;
+    height: 100%;
     display: block;
     border-radius: 0;
     border: none;
-    object-fit: cover; /* This makes the image fill its container without letterboxing */
+    object-fit: contain; /* Prevents the image from being cropped */
     object-position: center;
 }
