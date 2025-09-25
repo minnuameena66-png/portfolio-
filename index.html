@@ -3,32 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMEENA E H | Portfolio</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <!-- Navbar -->
     <header>
         <nav class="navbar">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Left: Text -->
         <div class="hero-left">
-            <h1><span class="hello">HELLO!</span></h1>
-            <h2>I'm <span class="highlight">AMEEI</span>NA E H</h2>
-            <h3>Data Analyst & Scientist</h3>
+            <p class="hello">Hello, my name is</p>
+            <h2>Ameena <span class="highlight">E.H.</span></h2>
+            <h3>I'm a passionate <span class="highlight">Data Analyst</span> & Web Developer</h3>
         </div>
+
+        <!-- Right: Image -->
         <div class="hero-right">
-            <img src="profile.jpg" alt="Ameena E H Profile" class="profile-pic">
+            <img src="your-profile-image.jpg" alt="Profile Picture" class="profile-pic">
         </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="padding: 100px 5%; background: #111;">
+        <h2>About Me</h2>
+        <p>I am a Data Analyst with experience in Python, SQL, and web development. I love creating projects that make an impact.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" style="padding: 100px 5%; background: #000;">
+        <h2>Projects</h2>
+        <p>Here are some of the projects I have worked on.</p>
+        <!-- Add project cards or links here -->
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="padding: 100px 5%; background: #111;">
+        <h2>Contact</h2>
+        <p>Feel free to reach out via email or LinkedIn.</p>
+        <!-- Add contact form or links here -->
     </section>
 
 </body>
 </html>
+
