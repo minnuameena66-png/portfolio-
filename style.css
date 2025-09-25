@@ -58,38 +58,24 @@ header {
 .hero {
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
-  text-align: center;
   background-color: #000;
-  padding-top: 80px; /* offset navbar */
+  padding: 100px 10%;
+  gap: 50px;
 }
 
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.hero-left {
+  flex: 1;
 }
 
-/* Profile Picture (waist-up, larger) */
-.profile-pic {
-  width: 350px;   /* Bigger size */
-  height: auto;   /* Keep aspect ratio */
-  border-radius: 20px; /* Slight rounded corners, not circle */
-  border: 6px solid #00aaff;
-  object-fit: cover;
-  margin-bottom: 20px;
-}
-
-/* Text */
-h1 {
+.hero-left h1 {
   font-size: 3rem;
   color: #00aaff;
   margin-bottom: 10px;
 }
 
-h2 {
+.hero-left h2 {
   font-size: 1.5rem;
   margin-bottom: 20px;
 }
@@ -107,6 +93,20 @@ h2 {
 
 .btn:hover {
   background: #0077cc;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-pic {
+  width: 280px;   /* bigger profile look */
+  height: 280px;
+  border-radius: 50%; /* Circular */
+  border: 6px solid #00aaff;
+  object-fit: cover;
 }
 
 /* Bounce Animation */
