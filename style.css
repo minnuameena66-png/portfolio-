@@ -53,12 +53,12 @@ header {
 }
 
 .hero-left {
-    flex: 0.8;
+    flex: 0.5; /* This smaller value makes the left side narrower */
     padding-right: 50px;
 }
 
 .hero-right {
-    flex: 2.2;
+    flex: 2.5; /* This larger value makes the right side much wider, stretching the image */
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -97,6 +97,6 @@ header {
     display: block;
     border-radius: 0;
     border: none;
-    object-fit: contain; /* Prevents the image from being cropped */
+    object-fit: contain; /* Prevents the image from being cropped vertically */
     object-position: center;
 }
