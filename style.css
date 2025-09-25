@@ -1,56 +1,52 @@
-/* Remove default browser margins */
+/* Reset */
 body {
   margin: 0;
   padding: 0;
-  background: #000; /* black background */
+  background: #000;
   font-family: Arial, sans-serif;
 }
 
+/* Navbar */
+header {
+  background: #000; /* black theme */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 50px;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #007bff; /* blue hover */
+}
+
+/* Adjust hero so it starts below navbar */
 .hero {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0;
+  margin-top: 60px; /* avoid overlap with navbar */
 }
 
-.hero-left {
-  flex: 1;
-  color: #fff;
-  padding-left: 50px;
-}
-
-.hero-left h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-.hero-left h2 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
-.hero-left .btn {
-  background: #007bff; /* blue button */
-  color: #fff;
-  padding: 12px 25px;
-  text-decoration: none;
-  border-radius: 6px;
-}
-
-.hero-right {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: stretch;
-  overflow: hidden;
-}
-
-.profile-pic {
-  width: 100%;       /* take entire right side */
-  height: 100vh;     /* fill screen height */
-  object-fit: cover; /* zoom + crop naturally */
-  border-radius: 0;  
-  background: none;  
-  box-shadow: none;  
-}
