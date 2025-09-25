@@ -2,19 +2,19 @@
 body {
     margin: 0;
     padding: 0;
-    background: #121212; /* Darker background for consistency */
+    background: #121212; /* Darker background */
     font-family: Arial, sans-serif;
-    color: #e0e0e0; /* Lighter text for contrast */
+    color: #e0e0e0;
 }
 
 /* Navbar */
 header {
-    background: #1a1a1a; /* Navbar background to match new theme */
+    background: #1a1a1a;
     position: fixed;
     top: 0;
     width: 100%;
     height: 60px;
-    z-index: 1000; /* Increased z-index */
+    z-index: 1000;
 }
 
 .navbar {
@@ -34,7 +34,7 @@ header {
 }
 
 .navbar ul li a {
-    color: #e0e0e0; /* Lighter text color */
+    color: #e0e0e0;
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: bold;
@@ -44,7 +44,7 @@ header {
 
 .navbar ul li a:hover,
 .navbar ul li a:focus {
-    color: #007bff; /* Accent color for hover */
+    color: #007bff;
     border-bottom: 2px solid #007bff;
     padding-bottom: 4px;
 }
@@ -81,7 +81,7 @@ header {
 
 .role {
     display: inline-block;
-    background-color: #007bff; /* Accent color */
+    background-color: #007bff;
     color: #fff;
     font-weight: 600;
     font-size: 1rem;
@@ -143,7 +143,7 @@ header {
     font-weight: bold;
 }
 
-/* CTA Button Style */
+/* CTA Button */
 .cta-button {
     display: inline-block;
     background-color: #007bff;
@@ -219,7 +219,6 @@ header {
     color: #ccc;
 }
 
-/* Contact Form */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -274,7 +273,7 @@ header {
 /* Skills Section */
 .skills-section {
     background-color: #1a1a1a;
-    padding: 6rem 5% 4rem; /* Adjusted padding for full-page layout */
+    padding: 6rem 5% 4rem;
     text-align: center;
 }
 
@@ -379,8 +378,8 @@ header {
 }
 
 .visible {
-    opacity: 1;
-    transform: translateX(0) translateY(0);
+    opacity: 1 !important;
+    transform: translateX(0) translateY(0) !important;
 }
 
 /* Responsive */
