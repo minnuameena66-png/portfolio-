@@ -14,7 +14,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 80px; /* define navbar height */
+    height: 80px;
     z-index: 10;
 }
 
@@ -51,7 +51,7 @@ header {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    min-height: 100vh; /* full viewport height */
+    min-height: 100vh;
     padding: 100px 5% 50px 5%; /* top padding = header height + spacing */
     box-sizing: border-box;
 }
@@ -60,6 +60,10 @@ header {
 .hero-left {
     flex: 1 1 500px;
     padding-right: 30px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.3s;
 }
 
 .hello {
@@ -68,6 +72,12 @@ header {
     color: #fff;
 }
 
+/* Name Highlight */
+.name-highlight {
+    color: #007bff; /* blue color */
+}
+
+/* Gradient animated heading */
 .hero-left h2 {
     font-size: clamp(2rem, 6vw, 4rem);
     font-weight: bold;
@@ -85,15 +95,12 @@ header {
     100% { background-position: 0% 50%; }
 }
 
+/* Role Text */
 .hero-left h3 {
     font-size: clamp(1rem, 3vw, 1.5rem);
     font-weight: normal;
     color: #fff;
     margin-top: 10px;
-}
-
-.highlight {
-    color: #007bff;
 }
 
 /* Right: Image */
@@ -102,14 +109,30 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.6s;
 }
 
 .profile-pic {
     width: auto;
     max-width: 100%;
-    max-height: 90vh; /* ensures image fits viewport */
+    max-height: 90vh;
     object-fit: cover;
-    border-radius: 20px; /* optional rounded edges */
+    border-radius: 20px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive Adjustments */
