@@ -1,16 +1,60 @@
-<section class="bio-section">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bio — Ameena E H</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="bio.html" class="active">BIO</a></li>
+        <li><a href="projects.html">MY SPACE</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Bio Section -->
+  <section class="bio-section">
     <div class="bio-text slide-left">
-        <h2>About Me</h2>
-        <p>I am a <span class="typed-text"></span></p>
-        <p>
-            Hi, I’m <strong>Ameena E.H.</strong> — a passionate Data Analyst with a keen interest in turning raw data into actionable insights.
-        </p>
-        <p>
-            I recently completed my degree in Data Science and have hands-on experience with Python, SQL, and data visualization tools. My goal is to combine analytical skills with creativity to solve real-world problems efficiently.
-        </p>
-        <a href="skills.html" class="cta-button">My Skills & Education</a>
+      <h2>About Me</h2>
+      <p>
+        Hi, I’m <strong>Ameena E.H.</strong> — a curious and driven <strong>Data Analyst</strong> who loves finding patterns in data and turning them into meaningful stories.
+      </p>
+      <p>
+        I recently graduated with a degree in <strong>Data Science</strong>, where I built skills in <strong>Python, SQL, Power BI, and Machine Learning</strong>. My projects focus on solving real-world problems and making insights easy to understand through clear visualizations.
+      </p>
+      <p>
+        Beyond numbers, I believe in creativity, teamwork, and continuous learning — qualities that help me bridge the gap between raw data and smart decisions.
+      </p>
+      <a href="skills.html" class="cta-button">My Skills & Education</a>
     </div>
+
     <div class="bio-image slide-right">
-        <img src="profile.jpg" alt="Ameena E.H">
+      <img src="profile.jpg" alt="Ameena E.H">
     </div>
-</section>
+  </section>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.bio-text, .bio-image').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
