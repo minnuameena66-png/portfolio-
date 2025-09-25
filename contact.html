@@ -1,35 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio — Contact</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Ameena E H Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav">
-      <ul class="nav-list">
-        <li><a href="index.html" class="nav-link">HOME</a></li>
-        <li><a href="bio.html" class="nav-link">BIO</a></li>
-        <li><a href="project.html" class="nav-link">PROJECT</a></li>
-        <li><a href="contact.html" class="nav-link active">CONTACT</a></li>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="bio.html">BIO</a></li>
+        <li><a href="projects.html">MY SPACE</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="page-content">
-    <h1 class="page-title">Contact Me</h1>
-    <form class="contact-form">
-      <input type="text" placeholder="Name">
-      <input type="email" placeholder="Email">
-      <textarea placeholder="Your Message"></textarea>
-      <button class="btn-submit" type="submit">Send</button>
-    </form>
-  </main>
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Contact Me</h2>
+    <p>Feel free to drop me a message. I’ll get back to you as soon as possible.</p>
 
-  <footer class="site-footer">
-    <p>© 2025 Ameena E H</p>
-  </footer>
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
 </body>
 </html>
+
