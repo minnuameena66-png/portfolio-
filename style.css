@@ -5,7 +5,7 @@ body {
     background: #000;
     font-family: Arial, sans-serif;
     color: #fff;
-    scroll-behavior: smooth;
+    overflow: hidden; /* prevent scrolling */
 }
 
 /* Navbar */
@@ -50,89 +50,49 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    min-height: 100vh;
-    padding: 100px 5% 50px 5%; /* top padding = header height + spacing */
+    width: 100vw;
+    height: 100vh; /* full viewport */
+    padding: 0 5%;
     box-sizing: border-box;
 }
 
 /* Left: Text */
 .hero-left {
-    flex: 1 1 500px;
+    flex: 1 1 50%;
     padding-right: 30px;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeInUp 1s forwards;
-    animation-delay: 0.3s;
+    text-align: left;
 }
 
+/* Hello text */
 .hello {
     font-size: 1.5rem;
-    font-weight: normal;
-    color: #fff;
 }
 
-/* Name Highlight */
+/* Name in solid blue */
 .name-highlight {
-    color: #007bff; /* blue color */
+    color: #007bff;
 }
 
-/* Gradient animated heading */
-.hero-left h2 {
-    font-size: clamp(2rem, 6vw, 4rem);
-    font-weight: bold;
-    margin: 10px 0 5px 0;
-    background: linear-gradient(90deg, #ff6ec4, #7873f5, #4ade80);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientMove 3s ease infinite;
-    background-size: 300% 300%;
-}
-
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Role Text */
+/* Role text */
 .hero-left h3 {
-    font-size: clamp(1rem, 3vw, 1.5rem);
-    font-weight: normal;
-    color: #fff;
+    font-size: 1.5rem;
     margin-top: 10px;
 }
 
 /* Right: Image */
 .hero-right {
-    flex: 1 1 400px;
+    flex: 1 1 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeInUp 1s forwards;
-    animation-delay: 0.6s;
 }
 
 .profile-pic {
     width: auto;
     max-width: 100%;
-    max-height: 90vh;
+    max-height: 80vh;
     object-fit: cover;
     border-radius: 20px;
-}
-
-/* Fade-in Animation */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* Responsive Adjustments */
@@ -140,7 +100,6 @@ header {
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 100px 5% 50px 5%;
     }
 
     .hero-left, .hero-right {
