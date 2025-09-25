@@ -53,12 +53,12 @@ header {
 }
 
 .hero-left {
-    flex: 0.8; /* Reduced size to push the image to the left */
+    flex: 0.8;
     padding-right: 50px;
 }
 
 .hero-right {
-    flex: 2.2; /* Increased size to make the image wider, starting from the middle */
+    flex: 2.2;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -91,11 +91,12 @@ header {
 
 /* Image Styling */
 .profile-pic {
-    max-height: 90vh;
-    width: auto;
+    max-height: 90vh; /* This can be removed if you want the image to stretch to fit the full height */
+    width: 100%; /* This is the key change to make the image fill the width */
+    height: 100%; /* This is the key change to make the image fill the height */
     display: block;
     border-radius: 0;
     border: none;
-    object-fit: contain;
+    object-fit: cover; /* This makes the image fill its container without letterboxing */
     object-position: center;
 }
