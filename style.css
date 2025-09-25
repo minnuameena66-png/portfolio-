@@ -53,13 +53,12 @@ header {
 }
 
 .hero-left {
-    flex: 0.5;
+    flex: 0.5; /* Makes the left section narrower to shift the image's start point to the middle */
     padding-right: 50px;
 }
 
 .hero-right {
-    flex: 2.5;
-    /* Aligns the image to the right within its wide container */
+    flex: 2.5; /* Makes the right section much wider */
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -92,9 +91,8 @@ header {
 
 /* Image Styling */
 .profile-pic {
-    /* These properties ensure the image is responsive and not cropped */
-    max-width: 100%;
-    height: auto;
+    max-height: 90vh; /* Limits the image height to prevent vertical cropping */
+    width: auto; /* Allows the width to adjust freely to maintain the aspect ratio */
     display: block;
     border-radius: 0;
     border: none;
