@@ -10,7 +10,7 @@ body {
 
 /* Navbar */
 header {
-  background: #222; /* dark gray like screenshot */
+  background: #222; /* dark gray like example */
   position: fixed;
   top: 0;
   width: 100%;
@@ -40,7 +40,7 @@ header {
   font-size: 0.95rem;
   font-weight: bold;
   letter-spacing: 1px;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 .navbar ul li a:hover,
@@ -107,7 +107,7 @@ header {
   max-height: 80vh;
   object-fit: cover;
   border-radius: 10px;
-  filter: grayscale(100%); /* black and white like example */
+  /* Removed grayscale filter */
 }
 
 /* Responsive */
