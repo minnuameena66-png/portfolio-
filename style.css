@@ -97,5 +97,5 @@ header {
     border-radius: 0;
     border: none;
     object-fit: cover; /* This value will fill the space while maintaining the aspect ratio, which will cause cropping. */
-    object-position: center 25%; /* The key to fixing your head getting cropped! This shifts the vertical focus of the image up. You may need to adjust the percentage (e.g., 25% or 30%) to get the perfect position for your image. */
+    object-position: center 15%; /* The key to fixing your head getting cropped! This shifts the vertical focus of the image up. You may need to adjust the percentage (e.g., 25% or 30%) to get the perfect position for your image. */
 }
