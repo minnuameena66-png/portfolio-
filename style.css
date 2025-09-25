@@ -46,22 +46,22 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 95vh;
+    height: 95vh; /* Keep sufficient height for the image */
     padding: 0 50px;
     margin-top: 60px;
     box-sizing: border-box;
 }
 
 .hero-left {
-    flex: 0.5; /* This smaller value makes the left side narrower */
+    flex: 0.5; /* Makes the left section narrower */
     padding-right: 50px;
 }
 
 .hero-right {
-    flex: 2.5; /* This larger value makes the right side much wider, stretching the image */
+    flex: 2.5; /* Makes the right section much wider, starting closer to the middle */
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: flex-end; /* Aligns content (image) to the right within its flex container */
+    align-items: stretch; /* Allows children to stretch vertically to fill container height */
 }
 
 /* Text Styling */
@@ -91,11 +91,16 @@ header {
 
 /* Image Styling */
 .profile-pic {
-    width: 100%; /* Forces the image to fill the container's width */
-    height: 100%; /* Forces the image to fill the container's height */
+    width: 100%; /* Force image to fill the entire width of its container */
+    height: 100%; /* Force image to fill the entire height of its container */
     display: block;
     border-radius: 0;
     border: none;
-    object-fit: fill; /* This is the key change to make the image stretch and fill the space */
-    object-position: center;
+    /* Use 'cover' to fill the space, then position it. */
+    /* If your head is still cut off, you might need to try 'object-position: top;' */
+    object-fit: cover; /* Fill the container, possibly cropping edges but not distorting */
+    object-position: center 30%; /* Adjust this value (e.g., center 20% or center 40%)
+                                   to shift the image's vertical center and prevent head cropping.
+                                   'center' for horizontal, '30%' for vertical from top. */
+    /* You may also try 'object-position: top;' if 'center 30%' doesn't work well */
 }
