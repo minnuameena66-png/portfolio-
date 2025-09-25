@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills & Education - Ameena E H Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="bio.html">BIO</a></li>
+                <li><a href="projects.html">MY SPACE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="skills-section full-page">
+        <h2>My Skills & Education</h2>
+        <div class="skills-container">
+            <div class="skills-column slide-up">
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li><i class="fas fa-database"></i> SQL, Python, R</li>
+                    <li><i class="fas fa-brain"></i> Machine Learning, Statistical Modeling</li>
+                </ul>
+            </div>
+            <div class="skills-column slide-up">
+                <h3>Tools & Platforms</h3>
+                <ul>
+                    <li><i class="fas fa-chart-bar"></i> Tableau, Power BI</li>
+                    <li><i class="fab fa-aws"></i> AWS, GCP</li>
+                    <li><i class="fas fa-code"></i> Git, VS Code</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="education-section">
+        <div class="education-container slide-up">
+            <h3>Education</h3>
+            <ul>
+                <li>
+                    <strong>Degree in Data Science</strong>
+                    <br>
+                    University Name, 2023
+                </li>
+                <li>
+                    <strong>Higher Secondary School</strong>
+                    <br>
+                    School Name, 2019
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.skills-column, .education-container').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
