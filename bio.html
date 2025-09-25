@@ -1,83 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bio - Ameena E H Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <header>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="bio.html">BIO</a></li>
-                <li><a href="projects.html">MY SPACE</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="bio-section">
-        <div class="bio-text slide-left">
-            <h2>About Me</h2>
-            <p>I am a <span class="typed-text"></span></p>
-            <p>
-                Hi, I’m <strong>Ameena E.H.</strong> — a passionate Data Analyst with a keen interest in turning raw data into actionable insights. I love exploring trends, visualizing data, and helping businesses make data-driven decisions.
-            </p>
-            <p>
-                I recently completed my degree in Data Science and have hands-on experience with Python, SQL, and data visualization tools. My goal is to combine analytical skills with creativity to solve real-world problems efficiently.
-            </p>
-        </div>
-        <div class="bio-image slide-right">
-            <img src="profile.jpg" alt="Ameena E.H">
-        </div>
-    </section>
-
-    <section class="skills-section">
-        <div class="skills-container">
-            <div class="skills-column slide-up">
-                <h3>Technical Skills</h3>
-                <ul>
-                    <li><i class="fas fa-database"></i> SQL, Python, R</li>
-                    <li><i class="fas fa-brain"></i> Machine Learning, Statistical Modeling</li>
-                </ul>
-            </div>
-            <div class="skills-column slide-up">
-                <h3>Tools & Platforms</h3>
-                <ul>
-                    <li><i class="fas fa-chart-bar"></i> Tableau, Power BI</li>
-                    <li><i class="fab fa-aws"></i> AWS, GCP</li>
-                    <li><i class="fas fa-code"></i> Git, VS Code</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if(entry.isIntersecting){
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.3 });
-
-        document.querySelectorAll('.bio-text, .bio-image, .skills-column').forEach(el => {
-            observer.observe(el);
-        });
-    </script>
-    
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed('.typed-text', {
-            strings: ['Data Analyst.', 'Data Scientist.', 'Problem Solver.'],
-            typeSpeed: 50,
-            backSpeed: 30,
-            loop: true
-        });
-    </script>
-
-</body>
-</html>
+<section class="bio-section">
+    <div class="bio-text slide-left">
+        <h2>About Me</h2>
+        <p>I am a <span class="typed-text"></span></p>
+        <p>
+            Hi, I’m <strong>Ameena E.H.</strong> — a passionate Data Analyst with a keen interest in turning raw data into actionable insights.
+        </p>
+        <p>
+            I recently completed my degree in Data Science and have hands-on experience with Python, SQL, and data visualization tools. My goal is to combine analytical skills with creativity to solve real-world problems efficiently.
+        </p>
+        <a href="skills.html" class="cta-button">My Skills & Education</a>
+    </div>
+    <div class="bio-image slide-right">
+        <img src="profile.jpg" alt="Ameena E.H">
+    </div>
+</section>
