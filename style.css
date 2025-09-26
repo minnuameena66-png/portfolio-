@@ -1,146 +1,103 @@
 /* Reset */
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
   background: #000;
-  font-family: Arial, sans-serif;
   color: #fff;
-  overflow: hidden; /* No scrolling */
 }
 
 /* Navbar */
 header {
-  background: #222; /* dark gray like example */
   position: fixed;
-  top: 0;
   width: 100%;
-  height: 60px;
-  z-index: 10;
+  top: 0;
+  z-index: 100;
 }
 
 .navbar {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 100%;
-  padding: 0 5%;
+  justify-content: center;
+  padding: 20px;
+  background: #000;
 }
 
 .navbar ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
-  gap: 30px;
+  gap: 40px;
 }
 
-.navbar ul li a {
+.navbar a {
   color: #fff;
   text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
-.navbar ul li a:hover,
-.navbar ul li a:focus {
-  color: #007bff;
-  border-bottom: 2px solid #007bff;
-  padding-bottom: 4px;
+.navbar a:hover {
+  color: #ff6b81;
 }
 
 /* Hero Section */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+#hero {
   min-height: 100vh;
-  padding: 0 8%;
-  box-sizing: border-box;
-}
-
-/* Left: Text */
-.hero-left {
-  flex: 1 1 50%;
-}
-
-.intro {
-  font-size: 1rem;
-  letter-spacing: 2px;
-  font-weight: 300;
-  color: #aaa;
-  margin-bottom: 10px;
-}
-
-.name {
-  font-size: clamp(2rem, 6vw, 4rem);
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #fff;
-  margin: 0;
-}
-
-/* Typing Role */
-.role {
-  margin-top: 20px;
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: transparent;
-  background: linear-gradient(90deg, #007bff, #00d4ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  display: inline-block;
-}
-
-.typed-text {
-  white-space: nowrap;
-}
-
-.cursor {
-  display: inline-block;
-  margin-left: 3px;
-  width: 2px;
-  background: #00d4ff;
-  animation: blink 0.7s infinite;
-}
-
-.cursor.hidden {
-  visibility: hidden;
-}
-
-@keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
-}
-
-/* Right: Image */
-.hero-right {
-  flex: 1 1 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
 }
 
-.profile-pic {
-  width: auto;
-  max-width: 100%;
-  max-height: 80vh;
-  object-fit: cover;
-  border-radius: 10px;
+.hero-content .intro {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: fadeInUp 1s forwards 0.5s;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 100px 5%;
+.hero-content .name {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff6b81, #ffd93d, #6bc1ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  animation: fadeInUp 1s forwards 1s;
+}
+
+.hero-content .role {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #ccc;
+  opacity: 0;
+  animation: fadeInUp 1s forwards 1.5s;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  .hero-left, .hero-right {
-    flex: 1 1 100%;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  .profile-pic {
-    max-height: 50vh;
-  }
+}
+
+/* Sections */
+section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+#about, #projects, #contact {
+  min-height: 100vh;
 }
