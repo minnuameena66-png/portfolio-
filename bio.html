@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bio - Ameena E H Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
 </head>
 <body>
 
@@ -24,13 +24,13 @@
         
         <div class="bio-text slide-left">
             <h2>About Me</h2>
-            <p>I am a <span class="typed-text"></span></p> 
+            
+            <p class="typed-intro">I am a <span class="typed-text"></span></p> 
+            
             <p>
-                Hi, I’m <strong>Ameena E.H.</strong> — a passionate Data Analyst with a keen interest in turning raw data into actionable insights. I love exploring trends, visualizing data, and helping businesses make data-driven decisions.
+                I am a <strong>detail-oriented Data Scientist and Analyst</strong> driven by a passion for transforming complex data into clear, actionable business strategies. Leveraging a strong technical foundation in <strong>Python, R, and SQL</strong>, along with visualization tools like <strong>Tableau and Power BI</strong>, I specialize in building predictive models that deliver measurable impact. For example, I successfully designed forecasting models (ARIMA, SVR) to improve prediction accuracy by <strong>15%</strong> on a Business Revenue Projection project and achieved a strong <strong>R² score of 0.82</strong> in Rainfall Prediction, showcasing my ability to generate high-value, reliable insights for strategic planning. Committed to continuous growth and technical excellence, I am eager to apply this analytical rigor to solve challenging real-world problems and contribute to meaningful business success.
             </p>
-            <p>
-                I recently completed my degree in Data Science and have hands-on experience with Python, SQL, and data visualization tools. My goal is to combine analytical skills with creativity to solve real-world problems efficiently.
-            </p>
+            
             <a href="skills.html" class="cta-button">My Skills & Education</a>
         </div>
         
@@ -41,7 +41,6 @@
     </section>
 
     <script>
-        // Intersection Observer script (as provided previously)
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if(entry.isIntersecting){
@@ -53,11 +52,12 @@
         document.querySelectorAll('.bio-text, .bio-image').forEach(el => {
             observer.observe(el);
         });
-
-        // Typed.js script
+    </script>
+    
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> 
+    <script>
         const typed_text_element = document.querySelector('.typed-text');
         if (typed_text_element) {
-             // You need to ensure Typed.js library is loaded via the script tag below
              var typed = new Typed('.typed-text', {
                 strings: ['Data Analyst.', 'Data Scientist.', 'Problem Solver.'],
                 typeSpeed: 50,
@@ -66,8 +66,6 @@
             });
         }
     </script>
-    
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> 
 
 </body>
 </html>
