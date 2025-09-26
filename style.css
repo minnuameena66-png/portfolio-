@@ -59,9 +59,17 @@ header {
   box-sizing: border-box;
 }
 
-/* Left: Text */
+/* Hero Left Text */
 .hero-left {
   flex: 1 1 50%;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease-out;
+}
+
+.hero-left.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .intro {
@@ -70,6 +78,8 @@ header {
   font-weight: 300;
   color: #aaa;
   margin-bottom: 10px;
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.3s;
 }
 
 .name {
@@ -78,6 +88,8 @@ header {
   text-transform: uppercase;
   color: #fff;
   margin: 0;
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.6s;
 }
 
 .role {
@@ -90,14 +102,24 @@ header {
   padding: 10px 20px;
   border-radius: 4px;
   margin-top: 20px;
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.9s;
 }
 
-/* Right: Image */
+/* Hero Right Image */
 .hero-right {
   flex: 1 1 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 1s ease-out;
+}
+
+.hero-right.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .profile-pic {
@@ -106,31 +128,25 @@ header {
   max-height: 80vh;
   object-fit: cover;
   border-radius: 10px;
+  animation: fadeInRight 1s forwards;
+  animation-delay: 1.2s;
 }
 
-/* Bio Section Sliding Animation */
+/* Bio Section */
 .bio-text, .bio-image {
   opacity: 0;
+  transform: translateY(50px);
   transition: all 1s ease-out;
 }
 
-.bio-text.slide-left {
-  transform: translateX(-50px);
-}
-
-.bio-image.slide-right {
-  transform: translateX(50px);
-}
-
-/* When element becomes visible */
 .bio-text.visible {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .bio-image.visible {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 /* Projects Section */
@@ -241,6 +257,17 @@ header {
 .contact-form button:hover {
   background: #0056b3;
   transform: translateY(-3px);
+}
+
+/* Animations Keyframes */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+  0% { opacity: 0; transform: translateX(50px); }
+  100% { opacity: 1; transform: translateX(0); }
 }
 
 /* Responsive */
