@@ -2,19 +2,19 @@
 body {
   margin: 0;
   padding: 0;
-  background: #000; /* Kept original black background */
+  background: #000;
   font-family: Arial, sans-serif;
   color: #fff;
 }
 
 /* Navbar */
 header {
-  background: #222; /* Kept original navbar background */
+  background: #222;
   position: fixed;
   top: 0;
   width: 100%;
   height: 60px;
-  z-index: 1000; /* Increased z-index for fixed header */
+  z-index: 10;
 }
 
 .navbar {
@@ -59,7 +59,7 @@ header {
   box-sizing: border-box;
 }
 
-/* Hero Left Text (Homepage Animations Preserved) */
+/* Hero Left Text */
 .hero-left {
   flex: 1 1 50%;
   opacity: 0;
@@ -106,7 +106,7 @@ header {
 }
 
 
-/* Hero Right Image (Homepage Animations Preserved) */
+/* Hero Right Image */
 .hero-right {
   flex: 1 1 50%;
   display: flex;
@@ -132,7 +132,7 @@ header {
   animation-delay: 1.2s;
 }
 
-/* -------------------- Bio Section (Layout and Content Style) -------------------- */
+/* Bio Section Layout */
 .bio-section {
     display: flex;
     align-items: center;
@@ -140,7 +140,7 @@ header {
     padding: 8rem 5%;
     max-width: 1200px;
     margin: auto;
-    gap: 4rem; 
+    gap: 4rem; /* Increased gap for better separation */
 }
 
 .bio-text {
@@ -157,7 +157,7 @@ header {
 }
 
 .bio-text .typed-intro {
-    font-size: 1.3rem; 
+    font-size: 1.3rem; /* Slightly larger for the intro line */
     font-weight: bold;
     color: #e0e0e0;
     margin-bottom: 1rem;
@@ -179,160 +179,7 @@ header {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
 }
 
-/* -------------------- CTA Button (Blue Box/Glow) -------------------- */
-.cta-button {
-    display: inline-block;
-    background-color: #007bff;
-    color: #fff;
-    padding: 12px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 25px;
-    /* Ensure box-shadow transition is included */
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    
-    /* Styles for the Blue Box/Glow Effect */
-    border: 1px solid #007bff; /* Adds a clean border */
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Initial blue glow */
-}
-
-.cta-button:hover {
-    background-color: #0056b3;
-    transform: translateY(-3px);
-    /* Enhanced glow on hover */
-    box-shadow: 0 5px 20px rgba(0, 123, 255, 0.8); 
-}
-
-/* -------------------- Animation Classes (For Bio and Skills Pages) -------------------- */
-
-/* Bio Section Sliding Animation */
-.bio-text, .bio-image, .skills-column, .education-container {
-  opacity: 0;
-  transition: all 1s ease-out;
-}
-
-/* Specific animations for Bio Page */
-.slide-left {
-    transform: translateX(-50px);
-}
-
-.slide-right {
-    transform: translateX(50px);
-}
-
-.slide-up {
-    transform: translateY(50px);
-}
-
-/* When element becomes visible */
-.visible {
-  opacity: 1;
-  transform: translateX(0) translateY(0);
-}
-
-/* -------------------- Skills Section (For skills.html) -------------------- */
-.skills-section {
-    background-color: #1a1a1a; /* Dark background for the section */
-    padding: 6rem 5% 4rem;
-    text-align: center;
-}
-
-.skills-section h2 {
-    font-size: 2.5rem;
-    color: #e0e0e0;
-    margin-bottom: 40px;
-}
-
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 3rem;
-    max-width: 1000px;
-    margin: auto;
-}
-
-/* Skills Column (Blue Glow/Box Card) */
-.skills-column {
-    flex: 1 1 300px;
-    background-color: #212121;
-    padding: 2rem;
-    border-radius: 10px;
-    border: 1px solid #333; 
-    box-shadow: 0 0 15px rgba(0, 123, 255, 0.3); /* Blue glow effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skills-column:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 5px 20px rgba(0, 123, 255, 0.6); /* Stronger glow on hover */
-}
-
-.skills-column h3 {
-    color: #007bff;
-    border-bottom: 2px solid #333;
-    padding-bottom: 0.5rem;
-}
-
-.skills-column ul {
-    list-style: none;
-    padding: 0;
-}
-
-.skills-column li {
-    padding: 0.5rem 0;
-    display: flex;
-    align-items: center;
-}
-
-.skills-column li i {
-    margin-right: 10px;
-    color: #007bff;
-}
-
-/* -------------------- Education Section (For skills.html) -------------------- */
-.education-section {
-    background-color: #000; /* Kept original body background */
-    padding: 4rem 5%;
-    text-align: center;
-}
-
-/* Education Container (Blue Glow/Box Card) */
-.education-container {
-    background-color: #212121;
-    padding: 3rem;
-    border-radius: 10px;
-    max-width: 800px;
-    margin: auto;
-    
-    border: 1px solid #333;
-    box-shadow: 0 0 15px rgba(0, 123, 255, 0.3);
-}
-
-.education-container h3 {
-    color: #007bff;
-    border-bottom: 2px solid #333;
-    padding-bottom: 0.5rem;
-    display: inline-block;
-}
-
-.education-container ul {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-    margin-top: 2rem;
-}
-
-.education-container li {
-    background-color: #1a1a1a;
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-    border-left: 3px solid #007bff;
-}
-
-/* -------------------- Projects Section -------------------- */
+/* Projects Section */
 .projects-section {
   padding: 80px 10%;
   text-align: center;
@@ -373,7 +220,7 @@ header {
   color: #fff;
 }
 
-/* -------------------- Contact Section -------------------- */
+/* Contact Section */
 .contact-section {
   padding: 80px 10%;
   text-align: center;
@@ -442,7 +289,7 @@ header {
   transform: translateY(-3px);
 }
 
-/* Animations Keyframes (Homepage) */
+/* Animations Keyframes */
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(30px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -470,17 +317,6 @@ header {
   .profile-pic {
     max-height: 50vh;
   }
-    .bio-section {
-        flex-direction: column; /* Stack bio elements on smaller screens */
-        text-align: center;
-        gap: 3rem; 
-    }
-    .bio-text {
-        padding-right: 0; 
-    }
-    .bio-image img {
-        max-width: 60%; /* Adjust image size for stacked layout */
-    }
 }
 
 @media(max-width:768px) {
