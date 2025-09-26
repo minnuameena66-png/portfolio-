@@ -132,22 +132,28 @@ header {
   animation-delay: 1.2s;
 }
 
-/* Bio Section */
-.bio-text, .bio-image {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease-out;
+/* Bio Section Layout FIX */
+.bio-section {
+    display: flex; /* THIS IS THE FIX for side-by-side */
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 5%;
+    max-width: 1200px;
+    margin: auto;
+    gap: 2rem; /* Spacing between image and text */
 }
 
-.bio-text.visible {
-  opacity: 1;
-  transform: translateY(0);
+.bio-text {
+    flex: 1; /* Allows text to take up half the space */
+    /* ... animation styles ... */
 }
 
-.bio-image.visible {
-  opacity: 1;
-  transform: translateY(0);
+.bio-image {
+    flex: 1; /* Allows image to take up half the space */
+    text-align: center;
+    /* ... animation styles ... */
 }
+/* ... rest of your CSS ... */
 
 /* Projects Section */
 .projects-section {
