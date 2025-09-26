@@ -1,14 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - Ameena E H Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ameena E H — Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
-  <!-- Navbar -->
+  <!-- Header -->
   <header>
     <nav class="navbar">
       <ul>
@@ -25,13 +24,54 @@
     <div class="hero-left">
       <p class="intro">MY NAME IS</p>
       <h1 class="name">AMEENA E H</h1>
-      <p class="role">DATA SCIENTIST & ANALYST</p>
+      <p class="role">
+        <span class="typed-text"></span><span class="cursor">|</span>
+      </p>
     </div>
     <div class="hero-right">
       <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
     </div>
   </section>
 
+  <!-- Typing effect -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const words = ["Data Scientist", "Data Analyst", "Business Analyst"];
+    let wordIndex = 0;
+    let charIndex = 0;
+    const typedText = document.querySelector(".typed-text");
+    const cursor = document.querySelector(".cursor");
+
+    function type() {
+      if (charIndex < words[wordIndex].length) {
+        typedText.textContent += words[wordIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, 100);
+      } else {
+        setTimeout(erase, 1500);
+      }
+    }
+
+    function erase() {
+      if (charIndex > 0) {
+        typedText.textContent = words[wordIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, 60);
+      } else {
+        wordIndex = (wordIndex + 1) % words.length;
+        setTimeout(type, 300);
+      }
+    }
+
+    if (typedText) {
+      type();
+    }
+
+    // Cursor blink
+    setInterval(() => {
+      cursor.classList.toggle("hidden");
+    }, 500);
+  });
+  </script>
 </body>
 </html>
-
