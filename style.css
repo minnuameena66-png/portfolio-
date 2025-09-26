@@ -92,22 +92,19 @@ header {
   animation-delay: 0.6s;
 }
 
-/* Role Typing Effect */
+/* Role Box */
 .role {
   display: inline-block;
-  font-size: 1rem;
+  background-color: #007bff; /* blue box */
+  color: #fff; /* white text */
   font-weight: 600;
-  color: #007bff;
-  background: linear-gradient(90deg, #00f, #0ff, #0f0, #ff0, #f00);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  border-right: 2px solid #fff;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: blink 0.75s step-end infinite;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border-radius: 5px;
   margin-top: 20px;
 }
+
 
 /* Hero Right Image */
 .hero-right {
