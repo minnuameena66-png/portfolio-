@@ -25,14 +25,14 @@
     <div class="hero-left">
       <p class="intro">MY NAME IS</p>
       <h1 class="name">AMEENA E H</h1>
-      <p class="role" id="role"></p>
+      <p class="role">DATA SCIENTIST & ANALYST</p>
     </div>
     <div class="hero-right">
       <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
     </div>
   </section>
 
-  <!-- JS for Hero Animations & Typing Effect -->
+  <!-- JS for Hero Animations & Safe Bio Scroll -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       // Show hero section immediately
@@ -41,20 +41,7 @@
       heroLeft.classList.add('visible');
       heroRight.classList.add('visible');
 
-      // Typing effect for role
-      const roleEl = document.getElementById('role');
-      const text = "DATA SCIENTIST & ANALYST";
-      let index = 0;
-      function typeRole() {
-        if(index < text.length) {
-          roleEl.textContent += text.charAt(index);
-          index++;
-          setTimeout(typeRole, 100); // typing speed
-        }
-      }
-      typeRole();
-
-      // Bio section scroll animation (safe check for other pages)
+      // Bio section scroll animation (safe for other pages)
       const bioText = document.querySelector('.bio-text');
       const bioImage = document.querySelector('.bio-image');
 
