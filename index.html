@@ -1,77 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ameena E H — Portfolio</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ameena E.H Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
+  <!-- Navbar -->
   <header>
     <nav class="navbar">
       <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="bio.html">BIO</a></li>
-        <li><a href="projects.html">MY SPACE</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-left">
-      <p class="intro">MY NAME IS</p>
-      <h1 class="name">AMEENA E H</h1>
-      <p class="role">
-        <span class="typed-text"></span><span class="cursor">|</span>
-      </p>
-    </div>
-    <div class="hero-right">
-      <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+  <section id="hero">
+    <div class="hero-content">
+      <p class="intro">Hi, my name is</p>
+      <h1 class="name">Ameena E.H</h1>
+      <h2 class="role">Data Scientist | Data Analyst | Business Analyst</h2>
     </div>
   </section>
 
-  <!-- Typing effect -->
-  <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const words = ["Data Scientist", "Data Analyst", "Business Analyst"];
-    let wordIndex = 0;
-    let charIndex = 0;
-    const typedText = document.querySelector(".typed-text");
-    const cursor = document.querySelector(".cursor");
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Your about content goes here...</p>
+  </section>
 
-    function type() {
-      if (charIndex < words[wordIndex].length) {
-        typedText.textContent += words[wordIndex].charAt(charIndex);
-        charIndex++;
-        setTimeout(type, 100);
-      } else {
-        setTimeout(erase, 1500);
-      }
-    }
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Your project content goes here...</p>
+  </section>
 
-    function erase() {
-      if (charIndex > 0) {
-        typedText.textContent = words[wordIndex].substring(0, charIndex - 1);
-        charIndex--;
-        setTimeout(erase, 60);
-      } else {
-        wordIndex = (wordIndex + 1) % words.length;
-        setTimeout(type, 300);
-      }
-    }
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Your contact info goes here...</p>
+  </section>
 
-    if (typedText) {
-      type();
-    }
-
-    // Cursor blink
-    setInterval(() => {
-      cursor.classList.toggle("hidden");
-    }, 500);
-  });
-  </script>
 </body>
 </html>
