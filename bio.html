@@ -37,22 +37,24 @@
     </div>
 
     <div class="bio-image slide-right">
-      <img src="profile.jpg" alt="Ameena E.H">
+      <img src="profile.jpg" alt="Ameena E.H" class="profile-pic">
     </div>
   </section>
 
   <!-- Scroll Animation Script -->
   <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.3 });
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.3 });
 
-    document.querySelectorAll('.bio-text, .bio-image').forEach(el => {
-      observer.observe(el);
+      document.querySelectorAll('.bio-text, .bio-image').forEach(el => {
+        observer.observe(el);
+      });
     });
   </script>
 
