@@ -1,75 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills & Education - Ameena E H Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education & Skills — Ameena E H</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="bio.html">BIO</a></li>
-                <li><a href="projects.html">MY SPACE</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="bio.html">BIO</a></li>
+        <li><a href="projects.html">MY SPACE</a></li>
+        <li><a href="education-skills.html" class="active">EDUCATION & SKILLS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section class="skills-section full-page">
-        <h2>My Skills & Education</h2>
-        <div class="skills-container">
-            <div class="skills-column slide-up">
-                <h3>Technical Skills</h3>
-                <ul>
-                    <li><i class="fas fa-database"></i> SQL, Python, R</li>
-                    <li><i class="fas fa-brain"></i> Machine Learning, Statistical Modeling</li>
-                </ul>
-            </div>
-            <div class="skills-column slide-up">
-                <h3>Tools & Platforms</h3>
-                <ul>
-                    <li><i class="fas fa-chart-bar"></i> Tableau, Power BI</li>
-                    <li><i class="fab fa-aws"></i> AWS, GCP</li>
-                    <li><i class="fas fa-code"></i> Git, VS Code</li>
-                </ul>
-            </div>
+  <!-- Education Section -->
+  <section class="education-section">
+    <h2>Education</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">2021 – 2024</div>
+        <div class="timeline-content">
+          <h3>B.Sc in Data Science</h3>
+          <p>XYZ University, Kerala</p>
+          <p>Specialized in Machine Learning, Data Analytics, and Visualization.</p>
         </div>
-    </section>
-
-    <section class="education-section">
-        <div class="education-container slide-up">
-            <h3>Education</h3>
-            <ul>
-                <li>
-                    <strong>Degree in Data Science</strong>
-                    <br>
-                    University Name, 2023
-                </li>
-                <li>
-                    <strong>Higher Secondary School</strong>
-                    <br>
-                    School Name, 2019
-                </li>
-            </ul>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2019 – 2021</div>
+        <div class="timeline-content">
+          <h3>Higher Secondary</h3>
+          <p>ABC School</p>
+          <p>Science Stream with Mathematics & Computer Science.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if(entry.isIntersecting){
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.3 });
+  <!-- Skills Section -->
+  <section class="skills-section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">🐍 Python</div>
+      <div class="skill-card">🗄️ SQL</div>
+      <div class="skill-card">📊 Power BI</div>
+      <div class="skill-card">🤖 Machine Learning</div>
+      <div class="skill-card">📈 Data Visualization</div>
+      <div class="skill-card">🌐 HTML & CSS</div>
+      <div class="skill-card">📉 Statistics</div>
+      <div class="skill-card">🧠 Problem Solving</div>
+    </div>
+  </section>
 
-        document.querySelectorAll('.skills-column, .education-container').forEach(el => {
-            observer.observe(el);
-        });
-    </script>
 </body>
 </html>
